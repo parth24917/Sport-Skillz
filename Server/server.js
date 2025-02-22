@@ -5,10 +5,6 @@ const express = require('express');
 const router = require('express').Router();
 const loginrouter = require('../Server/routes/auth')
 const registerrouter = require('../Server/routes/users')
-
-
-
-
  const app = express();
  const cors = require('cors');
  app.use(express.json());

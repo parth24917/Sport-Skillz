@@ -7,8 +7,7 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="module">
-    import { handleLogin } from './Login.js';
-    import { handleRegister } from './register.js';
+    import { handleLogin } from '../Functions/Login.js';
 
     window.handleLogin = handleLogin; // Expose to global scope
     window.handleRegister = handleRegister; // Expose to global scope
@@ -202,12 +201,6 @@
     <h1>Login</h1>
     <form id="regform" onsubmit="event.preventDefault();handleLogin()">
       <hr>
-      <!-- <div class="account-type">
-            <input type="radio" value="none" id="radioOne" name="account" checked/>
-            <label for="radioOne" class="radio">Personal</label>
-            <input type="radio" value="none" id="radioTwo" name="account" />
-            <label for="radioTwo" class="radio">Company</label>
-          </div> -->
       <hr>
       <div class="container">
         <label id="icon" for="mail"><i class="fas fa-envelope"></i></label>
@@ -229,7 +222,7 @@
       </div>
     </form>
   </div>
-  <script src="navbar.js"></script>
+  <script src="../Functions/Login.js"></script>
 </body>
 
 </html>

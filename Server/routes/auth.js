@@ -21,15 +21,12 @@ router.post('/',async(req,res) => {
     if(!validpassword)
         return res.status(401).send({ message:"Invalid Email or Password"});
     const token = user.generateAuthToken();
-
-    res.status(200).send({data:token,message:"Logged in succesfully"});
-    
+    res.status(200).send({data:token,message:"Logged in succesfully"}); 
   }
   catch(error)
   {
     console.error(error);
     res.status(500).send({message:"Internal server error"})
   }
-
 })
 module.exports = router;

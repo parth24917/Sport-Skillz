@@ -23,7 +23,7 @@ export async function handleRegister() {
       console.log('Registration successful:', data);
       
       // Redirect to the login page
-      window.location.href = '/login'; // Update this URL based on your routing structure
+      window.location.href = '/Client/Pages/loginpage.html'; // Update this URL based on your routing structure
   
     } catch (error) {
       alert(`${error}`);
