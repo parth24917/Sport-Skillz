@@ -1,0 +1,265 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#send{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: blueviolet;
+}
+.sir{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: crimson;
+    text-align: center;
+}
+
+nav{
+    background-color: midnightblue;
+    height: 80 px;
+    width: 100%;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    padding: 0 20px;
+
+}
+
+
+.glow{
+    font-size: 80px;
+    font-family: cursive;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+  
+nav ul {
+    float: right;
+    margin-right: 20px;
+
+
+}
+nav ul li{
+    display:  inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 13px;
+    line-height: 80px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    position: relative;
+    font-family: cursive;
+  
+}
+a.active,a:hover{
+    background: #005aec;
+    transition: 1s;
+    
+    border-radius: 5px;
+    
+
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-wrap: wrap;
+    z-index: 1;
+    
+}
+.container .card{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+.container .card .content{
+    padding: 20px;
+    margin-left: 10px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+
+
+    transition: 0.5s;
+
+    transition: 0.5s;
+}
+.container .card:hover .content
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.container .card .content h2{
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    font-size: 8cm;
+    color: rgba(219, 204, 204, 0.05);
+    pointer-events: none;
+}
+.image-class{
+    border-radius: 25px;
+    display: flex;
+    flex-direction: flex-end;
+    position: absolute;
+    right: 10px;
+    
+
+}
+.img1{
+    background-image: url(../public/Sports.jpg);
+    justify-content: center;
+    background-repeat: no-repeat;
+background-size: 100%;
+   
+}
+.container .card .content h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+    font-size: 1.4cm;
+    color: gold;
+    z-index: 1;
+}
+.container .card .content p{
+    text-align: left;
+   
+    margin-left: 10px;
+    color: greenyellow;
+    font-size: 1.8;
+    font-weight: 10px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.container .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+
+}
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  .row {margin: 0 -5px;}
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+footer{
+
+background-color: #000;
+position: relative;
+display: flex;
+padding: 20px;
+
+  }
+  .footer-content{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+  }
+.footer-content h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: aquamarine;
+    font-weight: bold;
+   
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+.footer-content h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    color: lightblue;
+}
+.footer-content p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkorange;
+ 
+    font-size: 20px;
+    margin: 10px auto;
+    line-height: 28px;
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+.blank{
+    background-color: white;
+    background-image: url(footer.jpg);
+}
+.blank p{
+    color: white;
+    font-size: xx-large;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+ .vid{
+     
+     padding-left: 500px;
+     padding-top: 0px;
+     margin-top: 1px;
+     
+ }
+  
+  
+  
+  
+  

@@ -1,0 +1,235 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="module">
+    import { handleLogin } from './Login.js';
+    import { handleRegister } from './register.js';
+
+    window.handleLogin = handleLogin; // Expose to global scope
+    window.handleRegister = handleRegister; // Expose to global scope
+  </script>
+</head>
+
+<style>
+  html,
+  body {
+
+
+    height: 100%;
+    background-image: url('loginbg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+
+
+  }
+
+  div,
+  h1,
+  form,
+  input,
+  p {
+
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    color: #666;
+  }
+
+  h1 {
+    padding: 0px 0;
+    font-size: 42px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  hr {
+    color: #a9a9a9;
+    opacity: 0.3;
+  }
+
+  .main-block {
+    max-width: 340px;
+    min-height: 360px;
+    padding: 10px 0;
+    margin: auto;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .31);
+    background-color: rgb(213, 197, 175);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .main-block:hover {
+    transform: translateY(-10px) scale(1.01);
+    /* Move up and slightly enlarge */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    /* Increase shadow for depth */
+  }
+
+  form {
+    margin: 0 30;
+  }
+
+  .account-type,
+  .gender {
+    margin: 15px 0;
+  }
+
+  input[type=radio] {
+    display: none;
+  }
+
+  label#icon {
+
+
+    border-radius: 5px 0 0 5px;
+  }
+
+  label.radio {
+    position: relative;
+    display: inline-block;
+    padding-top: 0px;
+    margin-right: 20px;
+    text-indent: 30px;
+    overflow: visible;
+    cursor: pointer;
+  }
+
+  label.radio:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #1c87c9;
+  }
+
+  label.radio:after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 4px;
+    top: 8px;
+    left: 4px;
+    border: 3px solid #fff;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+
+  input[type=radio]:checked+label:after {
+    opacity: 1;
+  }
+
+  input[type=text],
+  input[type=password] {
+    width: calc(100% - 57px);
+    height: 36px;
+    margin: 0;
+
+    padding-left: 10px;
+
+    border-radius: 0 5px 5px 0;
+    border: solid 1px #cbc9c9;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .09);
+    background: #d7d7d7;
+  }
+
+  input[type=password] {
+    margin-bottom: 0;
+  }
+
+  #icon {
+    display: inline-block;
+    padding: 9.3px 15px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .09);
+    background: #0d32c9;
+    color: #fff;
+    text-align: center;
+  }
+
+  .btn-block {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: none;
+    background: #1c87c9;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  button:hover {
+    background: #26a9e0;
+  }
+
+  .page {
+    background-color: coral;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+
+  }
+</style>
+
+<body>
+
+  <div class="main-block">
+
+
+    <h1>Login</h1>
+    <form id="regform" onsubmit="event.preventDefault();handleLogin()">
+      <hr>
+      <!-- <div class="account-type">
+            <input type="radio" value="none" id="radioOne" name="account" checked/>
+            <label for="radioOne" class="radio">Personal</label>
+            <input type="radio" value="none" id="radioTwo" name="account" />
+            <label for="radioTwo" class="radio">Company</label>
+          </div> -->
+      <hr>
+      <div class="container">
+        <label id="icon" for="mail"><i class="fas fa-envelope"></i></label>
+        <input type="text" name="mail" id="mail" placeholder="Email" required />
+      </div>
+
+      <div class="container">
+        <label id="icon" for="password"><i class="fas fa-unlock-alt"></i></label>
+        <input type="password" name="password" id="password" placeholder="Password" required />
+      </div>
+
+      <hr>
+
+      <hr>
+      <div class="btn-block">
+        <p>By clicking Register, you agree on our <a href="https://www.w3docs.com/privacy-policy">Privacy Policy.</a>.
+        </p>
+        <button type="submit" href="/">Submit</button>
+      </div>
+    </form>
+  </div>
+  <script src="navbar.js"></script>
+</body>
+
+</html>

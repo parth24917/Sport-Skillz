@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>About Us - Sport&skillz</title>
+  <style>
+   
+    header {
+      background-color: #002233;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-family: 'Pacifico', cursive;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5), 4px 4px 8px rgba(255, 255, 255, 0.3), 6px 6px 12px rgba(255, 255, 255, 0.2);
+      animation: glow 2s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+  0% { text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5), 4px 4px 8px rgba(255, 255, 255, 0.3), 6px 6px 12px rgba(255, 255, 255, 0.2); }
+  50% { text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.5), 6px 6px 12px rgba(255, 255, 255, 0.3), 8px 8px 16px rgba(255, 255, 255, 0.2); }
+  100% { text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5), 4px 4px 8px rgba(255, 255, 255, 0.3), 6px 6px 12px rgba(255, 255, 255, 0.2); }
+}
+
+
+
+.card {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://source.unsplash.com/random/?sports');
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: circle(50%);
+  filter: brightness(50%);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin: 0 0 10px 0;
+  font-family: 'Pacifico', cursive;
+  color: #003366;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+footer {
+  background-color: #002233;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+footer p {
+  margin: 0;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sport&skillz</h1>
+  </header>
+  <main>
+    <div class="card">
+      <img src="https://source.unsplash.com/random/?basketball,sports" alt="Basketball">
+      <h2>Who We Are</h2>
+      <p>We are a team of sports enthusiasts who are passionate about helping others improve their skills and reach their full potential.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/random/?soccer,sports" alt="Soccer">
+      <h2>Our Mission</h2>
+      <p>Our mission is to provide high-quality sports training and resources to athletes of all levels, from beginners to professionals.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/random/?football,sports" alt="Football">
+      <h2>Our Values</h2>
+      <p>We believe in the power of sports to transform lives, build character, and foster community. We are committed to promoting sportsmanship, respect, and inclusivity in all that we do.</p>
+    </div>
+  </main>
+  <footer>
+    <p>Copyright © 2023 Sport&skillz</p>
+  </footer>
+  <script src="../Functions/navbar.js"></script>
+</body>
+</html>
